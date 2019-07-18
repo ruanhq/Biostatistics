@@ -32,7 +32,7 @@ goout <- X_stu$goout
 Medu <- X_stu$Medu
 Fedu <- X_stu$Fedu
 
-X_stu_categorical <- subset(X_stu, select = -c(age, absences))
+X_stu_categorical <- subset(X_stu, select = -c(age, absences, health, famrel, freetime, goout, Medu, Fedu))
 for(i in 1:ncol(X_stu_categorical)){
   X_stu_categorical[,i] <- as.factor(X_stu_categorical[,i])
 }
@@ -105,8 +105,8 @@ for(k in 1:m_lambda){
 
 ##########
 #Visualize the important predictors:
-optimal_lambda <- lambda_sequence[which.max(aupr_score)]
-final_model <- grplasso(x = X_train, y = Pass, lambda = optimal_lambda)
+#optimal_lambda <- lambda_sequence[which.max(aupr_score)]
+final_model <- grplasso(x = as.matrix(X_train), y = Pass, index = groups_index, lambda = 7)
 coeff <- final_model$norm.pen
 names(coeff) <- c('Intercept',
                   'Age', 'Absence', 'health', 'famrel', 'freetime', 'goout', 'Medu', 'Fedu', '')
