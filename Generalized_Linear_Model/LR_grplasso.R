@@ -101,15 +101,13 @@ for(k in 1:m_lambda){
   aupr_score[k] <- pr.curve(oob_score, Pass)$auc.integral
   accuracy[k] <- mean(Pass == oob_pred)
 }
-##########
 
 ##########
 #Visualize the important predictors:
 #optimal_lambda <- lambda_sequence[which.max(aupr_score)]
 final_model <- grplasso(x = as.matrix(X_train), y = Pass, index = groups_index, lambda = 7)
-coeff <- final_model$norm.pen
-names(coeff) <- c('Intercept',
-                  'Age', 'Absence', 'health', 'famrel', 'freetime', 'goout', 'Medu', 'Fedu', '')
+coeff <- final_model$norms.pen
+names(coeff) <- c('Age', 'Absence', 'health', 'famrel', 'freetime', 'goout', 'Medu', 'Fedu', colnames(X_stu_categorical) )
 #Return the variables by its importance:
 names(sort(coeff[coeff!=0], decreasing = TRUE))
 
