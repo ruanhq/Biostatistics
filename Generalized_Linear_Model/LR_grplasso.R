@@ -54,6 +54,7 @@ X_train <- as.data.frame(cbind(X_continuous, X_dummy))
 #Then construct the group index:
 groups_index <- c(NA, 1, 2, 3, 4, 5, 6, 7, 8)
 for(i in 1:n_cate){
+  #Number of dummy variables we create for each of the categorical feature:
   n_group <- len(unique(X_stu_categorical[,i])) - 1
   groups_index <- c(groups_index, rep(i + 8, n_group))
 }
