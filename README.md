@@ -1,6 +1,6 @@
 # Statistics Core Courses
-Biostatistics Ph.D Core Courses in UCDavis:
-Survival Analysis
-Generalized Linear Model
-Longitudinal Data Analysis
-Inference for Linear Mixed Model.
+### Biostatistics Ph.D Core Courses in UCDavis: </br>
+Survival Analysis </br>
+Generalized Linear Model </br>
+Longitudinal Data Analysis </br>
+Inference for Linear Mixed Model. </br>
