@@ -1,6 +1,6 @@
 ##############
 
-#Logistic_Regression Group-Lasso for student dataset:
+#Logistic_Regression Group-Lasso for student dataset to investigate what may related to the students' exam failure:
 library(grplasso)
 library(bootstrap)
 library(fastDummies)
