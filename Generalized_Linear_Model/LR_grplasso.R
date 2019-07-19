@@ -90,7 +90,7 @@ mcc_seq <- rep(0, n)
 aupr_score <- rep(0, m_lambda)
 accuracy <- rep(0, m_lambda)
 for(k in 1:m_lambda){
-  #Perform the LooCV and select optimal lambda by MCC and AUPR
+  #Perform the LooCV and select optimal lambda by accuracy and AUPR
   cur_lambda <- lambda_sequence[k]
   for(i in 1:n){
     X_tra <- as.matrix(X_train[-i,])
