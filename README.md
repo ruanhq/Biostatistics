@@ -3,4 +3,4 @@
 Survival Analysis </br>
 Generalized Linear Model </br>
 Longitudinal Data Analysis </br>
-Inference for Linear Mixed Model. </br>
+Linear Mixed-Effects Model. </br>
