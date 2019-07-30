@@ -1,4 +1,4 @@
-## Skin-Cancer Study
+## Skin-Cancer Study 
 
 1. Fit a Generalized Linear mixed model with model selection via AIC.
 2. Fit a Generalized Estimating Equation and perform model diagnostics. 
